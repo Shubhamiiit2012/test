@@ -1,0 +1,42 @@
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+  href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css"
+  type="text/css">
+    
+<title>EC2 compliance</title>
+
+</head>
+
+
+
+<body>
+  
+
+  <div class="container">
+    <h1>EC2 compliance Rules for Ports</h1>
+  </div>
+
+
+  <div class="container">
+
+    <table class="table" border="1">
+      <th><h3>Security Group</h3></th>
+      <th><h3>Port Status</h3></th>
+
+      <tbody>
+        {%for port_id,port_l in ports_details_map.items %}
+        <tr>
+          <th>{{port_id}}</th>
+          <th>{% for item in port_l%}{{ item|linebreaks}}{% endfor %}</th>
+        {%endfor%}
+        </tr>
+        
+
+      </tbody>
+    </table>
+
+  </div>
+</body>
+
+</html>
