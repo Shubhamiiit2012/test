@@ -31,7 +31,7 @@ def main():
                             print("Error : Port " + port + " is supposed to be closed.")
 
             except Exception as value_error:
-                print("Unknown port is open.")
+                print("Error: Unknown port is open.")
 
 
 def extract_ports(rule):

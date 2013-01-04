@@ -10,8 +10,6 @@ def main():
     blocked_ports_string=raw_input("Type ports seperated by commas and no spaces.\n")
     blocked_port_list=create_list_comma_seperated(blocked_ports_string)
     
-    
-    
     for sec_group in rs:
         print("Security group name - "+str(sec_group.name))
         for rule in sec_group.rules:
@@ -33,7 +31,7 @@ def main():
                             print("Error : Port " + port + " is supposed to be closed.")
 
             except Exception as value_error:
-                print("Unknown port is open.")
+                print("Error: Unknown port is open.")
 
 
 def extract_ports(rule):
